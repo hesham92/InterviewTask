@@ -36,12 +36,8 @@
 		2296160F233F6C0F000CCFE4 /* PostDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22961601233F6C0F000CCFE4 /* PostDetails.storyboard */; };
 		22961610233F6C0F000CCFE4 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961602233F6C0F000CCFE4 /* PostDetailsViewController.swift */; };
 		22961612233F6D6A000CCFE4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961611233F6D6A000CCFE4 /* R.generated.swift */; };
-		2296161C233F734A000CCFE4 /* PostDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961613233F7349000CCFE4 /* PostDetailsPresenterTests.swift */; };
 		2296161D233F734A000CCFE4 /* MockAppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961614233F7349000CCFE4 /* MockAppNavigator.swift */; };
-		2296161E233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961615233F7349000CCFE4 /* PostDetailsViewMock.swift */; };
-		2296161F233F734A000CCFE4 /* PostsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961616233F734A000CCFE4 /* PostsViewMock.swift */; };
 		22961620233F734A000CCFE4 /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961617233F734A000CCFE4 /* PostsPresenterTests.swift */; };
-		22961621233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961619233F734A000CCFE4 /* PostDetailsViewMock.swift */; };
 		22961622233F734A000CCFE4 /* PostsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296161A233F734A000CCFE4 /* PostsViewMock.swift */; };
 		22961623233F734A000CCFE4 /* MockAppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296161B233F734A000CCFE4 /* MockAppNavigator.swift */; };
 		22961625233F7489000CCFE4 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961624233F7489000CCFE4 /* UITests.swift */; };
@@ -109,12 +105,8 @@
 		22961601233F6C0F000CCFE4 /* PostDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostDetails.storyboard; sourceTree = "<group>"; };
 		22961602233F6C0F000CCFE4 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		22961611233F6D6A000CCFE4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		22961613233F7349000CCFE4 /* PostDetailsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenterTests.swift; sourceTree = "<group>"; };
-		22961614233F7349000CCFE4 /* MockAppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppNavigator.swift; sourceTree = "<group>"; };
-		22961615233F7349000CCFE4 /* PostDetailsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewMock.swift; sourceTree = "<group>"; };
-		22961616233F734A000CCFE4 /* PostsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewMock.swift; sourceTree = "<group>"; };
+		22961614233F7349000CCFE4 /* MockAppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAppNavigator.swift; path = ../MockAppNavigator.swift; sourceTree = "<group>"; };
 		22961617233F734A000CCFE4 /* PostsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
-		22961619233F734A000CCFE4 /* PostDetailsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewMock.swift; sourceTree = "<group>"; };
 		2296161A233F734A000CCFE4 /* PostsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewMock.swift; sourceTree = "<group>"; };
 		2296161B233F734A000CCFE4 /* MockAppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppNavigator.swift; sourceTree = "<group>"; };
 		22961624233F7489000CCFE4 /* UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
@@ -210,12 +202,8 @@
 		229615AC233F66B5000CCFE4 /* InterViewTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				22961614233F7349000CCFE4 /* MockAppNavigator.swift */,
 				22961618233F734A000CCFE4 /* Mocks */,
-				22961613233F7349000CCFE4 /* PostDetailsPresenterTests.swift */,
-				22961615233F7349000CCFE4 /* PostDetailsViewMock.swift */,
 				22961617233F734A000CCFE4 /* PostsPresenterTests.swift */,
-				22961616233F734A000CCFE4 /* PostsViewMock.swift */,
 				229615AF233F66B5000CCFE4 /* Info.plist */,
 			);
 			path = InterViewTaskTests;
@@ -405,7 +393,7 @@
 		22961618233F734A000CCFE4 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				22961619233F734A000CCFE4 /* PostDetailsViewMock.swift */,
+				22961614233F7349000CCFE4 /* MockAppNavigator.swift */,
 				2296161A233F734A000CCFE4 /* PostsViewMock.swift */,
 				2296161B233F734A000CCFE4 /* MockAppNavigator.swift */,
 			);
@@ -769,13 +757,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2296161D233F734A000CCFE4 /* MockAppNavigator.swift in Sources */,
-				2296161E233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */,
 				22961623233F734A000CCFE4 /* MockAppNavigator.swift in Sources */,
-				22961621233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */,
 				22961622233F734A000CCFE4 /* PostsViewMock.swift in Sources */,
-				2296161F233F734A000CCFE4 /* PostsViewMock.swift in Sources */,
 				22961620233F734A000CCFE4 /* PostsPresenterTests.swift in Sources */,
-				2296161C233F734A000CCFE4 /* PostDetailsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
