@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationBannerSwift
+import UITextView_Placeholder
 
 class AddPostViewController: UIViewController, LoadingViewShowing & ErrorViewShowing {
     
@@ -32,10 +33,13 @@ class AddPostViewController: UIViewController, LoadingViewShowing & ErrorViewSho
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.dismissView))
         self.dimmedView.addGestureRecognizer(gesture)
         
+        self.postTitleTextField.placeholder = R.string.localizable.title()
         self.postTitleTextField.layer.borderWidth = 1.0
         self.postTitleTextField.layer.borderColor = UIColor.init(red: 220.0 / 255.0, green: 220.0 / 255.0, blue: 2220.0 / 255.0, alpha: 1.0).cgColor
+        
         self.bodyTextView.layer.borderWidth = 1.0
         self.bodyTextView.layer.borderColor = UIColor.init(red: 220.0 / 255.0, green: 220.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0).cgColor
+        self.bodyTextView.placeholder = R.string.localizable.body()
     }
 }
 
@@ -81,8 +85,8 @@ extension AddPostViewController: AddPostViewProtocol {
         self.dismiss(animated: true)
     }
     
-    func showSuccessMessage(message: String) {
-        let banner = NotificationBanner(title: "Success", subtitle: message, style: .success)
+    func showSuccessMessage(title: String, message: String) {
+        let banner = NotificationBanner(title: title, subtitle: message, style: .success)
         banner.show()
     }
 }

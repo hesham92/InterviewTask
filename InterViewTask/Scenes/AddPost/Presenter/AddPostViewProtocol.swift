@@ -13,7 +13,7 @@ protocol AddPostViewProtocol: class {
     func notifyDelegateWithEdited(post: Post)    
     func dismissView()
     func loadPost(_ post: Post)
-    func showSuccessMessage(message: String)
+    func showSuccessMessage(title: String, message: String)
 }
 
 protocol AddPostViewControllerDelegate: class {

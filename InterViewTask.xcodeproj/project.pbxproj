@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22961596233F66B4000CCFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961595233F66B4000CCFE4 /* AppDelegate.swift */; };
-		22961598233F66B4000CCFE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961597233F66B4000CCFE4 /* ViewController.swift */; };
-		2296159E233F66B4000CCFE4 /* InterViewTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2296159C233F66B4000CCFE4 /* InterViewTask.xcdatamodeld */; };
 		229615A0233F66B5000CCFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2296159F233F66B5000CCFE4 /* Assets.xcassets */; };
 		229615A3233F66B5000CCFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229615A1233F66B5000CCFE4 /* LaunchScreen.storyboard */; };
 		229615CE233F68EF000CCFE4 /* LoadViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615C8233F68EF000CCFE4 /* LoadViewShowing.swift */; };
@@ -52,6 +50,7 @@
 		2296162E233FB392000CCFE4 /* AddPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296162D233FB392000CCFE4 /* AddPostPresenter.swift */; };
 		22961630233FB3CD000CCFE4 /* AddPostViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296162F233FB3CD000CCFE4 /* AddPostViewProtocol.swift */; };
 		22961632233FB401000CCFE4 /* AddPostPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961631233FB401000CCFE4 /* AddPostPresenterProtocol.swift */; };
+		22961635234013D3000CCFE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22961637234013D3000CCFE4 /* Localizable.strings */; };
 		5B5EEF210F71BD7F66B59427 /* Pods_InterViewTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A17A0BB5BA8163670A6394 /* Pods_InterViewTaskUITests.framework */; };
 		9C43414B79592CC552359064 /* Pods_InterViewTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B26EF08D446B8A2575073C /* Pods_InterViewTask.framework */; };
 		A5431C579B9A84C34B78A46E /* Pods_InterViewTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCF7138BB7031DF16C29CF5 /* Pods_InterViewTaskTests.framework */; };
@@ -77,8 +76,6 @@
 /* Begin PBXFileReference section */
 		22961592233F66B4000CCFE4 /* InterViewTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterViewTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22961595233F66B4000CCFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22961597233F66B4000CCFE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2296159D233F66B4000CCFE4 /* InterViewTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InterViewTask.xcdatamodel; sourceTree = "<group>"; };
 		2296159F233F66B5000CCFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		229615A2233F66B5000CCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229615A4233F66B5000CCFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +123,10 @@
 		2296162D233FB392000CCFE4 /* AddPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenter.swift; sourceTree = "<group>"; };
 		2296162F233FB3CD000CCFE4 /* AddPostViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewProtocol.swift; sourceTree = "<group>"; };
 		22961631233FB401000CCFE4 /* AddPostPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenterProtocol.swift; sourceTree = "<group>"; };
+		22961636234013D3000CCFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22961638234013ED000CCFE4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Posts.strings; sourceTree = "<group>"; };
+		22961639234013ED000CCFE4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2296163A234013ED000CCFE4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		251CB153E84B0548C2D633F7 /* Pods-InterViewTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterViewTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-InterViewTaskUITests/Pods-InterViewTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		304A6A378CB8F7328CEAED2F /* Pods-InterViewTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterViewTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-InterViewTaskUITests/Pods-InterViewTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64A17A0BB5BA8163670A6394 /* Pods_InterViewTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterViewTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,11 +199,10 @@
 				229615D3233F6BBF000CCFE4 /* Navigator */,
 				229615C6233F68EF000CCFE4 /* Plugins */,
 				22961595233F66B4000CCFE4 /* AppDelegate.swift */,
-				22961597233F66B4000CCFE4 /* ViewController.swift */,
 				2296159F233F66B5000CCFE4 /* Assets.xcassets */,
 				229615A1233F66B5000CCFE4 /* LaunchScreen.storyboard */,
 				229615A4233F66B5000CCFE4 /* Info.plist */,
-				2296159C233F66B4000CCFE4 /* InterViewTask.xcdatamodeld */,
+				22961637234013D3000CCFE4 /* Localizable.strings */,
 			);
 			path = InterViewTask;
 			sourceTree = "<group>";
@@ -285,8 +285,8 @@
 		229615D8233F6BE3000CCFE4 /* RealmCache */ = {
 			isa = PBXGroup;
 			children = (
-				229615D9233F6BE3000CCFE4 /* CacheModels */,
 				229615DD233F6BE3000CCFE4 /* RealmCache.swift */,
+				229615D9233F6BE3000CCFE4 /* CacheModels */,
 			);
 			path = RealmCache;
 			sourceTree = "<group>";
@@ -319,9 +319,9 @@
 		229615EB233F6C0F000CCFE4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				22961626233F7A41000CCFE4 /* AddPost */,
 				229615EC233F6C0F000CCFE4 /* Posts */,
 				229615F8233F6C0F000CCFE4 /* PostDetails */,
+				22961626233F7A41000CCFE4 /* AddPost */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -329,9 +329,9 @@
 		229615EC233F6C0F000CCFE4 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				229615F3233F6C0F000CCFE4 /* View */,
 				229615ED233F6C0F000CCFE4 /* Presenter */,
 				229615F1233F6C0F000CCFE4 /* Model */,
-				229615F3233F6C0F000CCFE4 /* View */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -357,8 +357,8 @@
 		229615F3233F6C0F000CCFE4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				229615F4233F6C0F000CCFE4 /* PostsViewController.swift */,
 				229615F5233F6C0F000CCFE4 /* Posts.storyboard */,
+				229615F4233F6C0F000CCFE4 /* PostsViewController.swift */,
 				229615F7233F6C0F000CCFE4 /* PostTableViewCell.swift */,
 			);
 			path = View;
@@ -367,9 +367,9 @@
 		229615F8233F6C0F000CCFE4 /* PostDetails */ = {
 			isa = PBXGroup;
 			children = (
+				22961600233F6C0F000CCFE4 /* View */,
 				229615F9233F6C0F000CCFE4 /* Presenter */,
 				229615FD233F6C0F000CCFE4 /* Model */,
-				22961600233F6C0F000CCFE4 /* View */,
 			);
 			path = PostDetails;
 			sourceTree = "<group>";
@@ -415,8 +415,8 @@
 		22961626233F7A41000CCFE4 /* AddPost */ = {
 			isa = PBXGroup;
 			children = (
-				2296162C233FB373000CCFE4 /* Presenter */,
 				22961627233F7B66000CCFE4 /* View */,
+				2296162C233FB373000CCFE4 /* Presenter */,
 			);
 			path = AddPost;
 			sourceTree = "<group>";
@@ -555,6 +555,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 22961589233F66B4000CCFE4;
 			productRefGroup = 22961593233F66B4000CCFE4 /* Products */;
@@ -574,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22961608233F6C0F000CCFE4 /* Posts.storyboard in Resources */,
+				22961635234013D3000CCFE4 /* Localizable.strings in Resources */,
 				2296160F233F6C0F000CCFE4 /* PostDetails.storyboard in Resources */,
 				22961629233F7B74000CCFE4 /* AddPost.storyboard in Resources */,
 				229615A3233F66B5000CCFE4 /* LaunchScreen.storyboard in Resources */,
@@ -742,7 +744,6 @@
 				22961610233F6C0F000CCFE4 /* PostDetailsViewController.swift in Sources */,
 				2296160C233F6C0F000CCFE4 /* PostDetailsPresenter.swift in Sources */,
 				22961612233F6D6A000CCFE4 /* R.generated.swift in Sources */,
-				22961598233F66B4000CCFE4 /* ViewController.swift in Sources */,
 				2296160A233F6C0F000CCFE4 /* PostDetailsViewProtocol.swift in Sources */,
 				229615E3233F6BE3000CCFE4 /* Cache.swift in Sources */,
 				229615E5233F6BE3000CCFE4 /* CachePost.swift in Sources */,
@@ -758,7 +759,6 @@
 				229615D5233F6BBF000CCFE4 /* Navigator.swift in Sources */,
 				229615D1233F68EF000CCFE4 /* InternetConnection.swift in Sources */,
 				2296160D233F6C0F000CCFE4 /* Comment.swift in Sources */,
-				2296159E233F66B4000CCFE4 /* InterViewTask.xcdatamodeld in Sources */,
 				22961606233F6C0F000CCFE4 /* Post.swift in Sources */,
 				2296160B233F6C0F000CCFE4 /* PostDetailsPresenterProtocol.swift in Sources */,
 			);
@@ -807,6 +807,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				229615A2233F66B5000CCFE4 /* Base */,
+				22961639234013ED000CCFE4 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -815,8 +816,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				229615F6233F6C0F000CCFE4 /* Base */,
+				22961638234013ED000CCFE4 /* ar */,
 			);
 			name = Posts.storyboard;
+			sourceTree = "<group>";
+		};
+		22961637234013D3000CCFE4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22961636234013D3000CCFE4 /* en */,
+				2296163A234013ED000CCFE4 /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -826,6 +837,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -887,6 +899,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1099,19 +1112,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2296159C233F66B4000CCFE4 /* InterViewTask.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2296159D233F66B4000CCFE4 /* InterViewTask.xcdatamodel */,
-			);
-			currentVersion = 2296159D233F66B4000CCFE4 /* InterViewTask.xcdatamodel */;
-			path = InterViewTask.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2296158A233F66B4000CCFE4 /* Project object */;
 }

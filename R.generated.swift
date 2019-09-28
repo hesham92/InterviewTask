@@ -58,6 +58,138 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
+  struct string {
+    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
+    struct launchScreen {
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
+    struct localizable {
+      /// en translation: Body
+      /// 
+      /// Locales: en, ar
+      static let body = Rswift.StringResource(key: "Body", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Delete
+      /// 
+      /// Locales: en, ar
+      static let delete = Rswift.StringResource(key: "Delete", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Edit
+      /// 
+      /// Locales: en, ar
+      static let edit = Rswift.StringResource(key: "Edit", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Post added succssfully
+      /// 
+      /// Locales: en, ar
+      static let postAddedSuccssfully = Rswift.StringResource(key: "Post added succssfully", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Post edited succssfully
+      /// 
+      /// Locales: en, ar
+      static let postEditedSuccssfully = Rswift.StringResource(key: "Post edited succssfully", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Posts
+      /// 
+      /// Locales: en, ar
+      static let posts = Rswift.StringResource(key: "Posts", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Success
+      /// 
+      /// Locales: en, ar
+      static let success = Rswift.StringResource(key: "Success", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      /// en translation: Title
+      /// 
+      /// Locales: en, ar
+      static let title = Rswift.StringResource(key: "Title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "ar"], comment: nil)
+      
+      /// en translation: Body
+      /// 
+      /// Locales: en, ar
+      static func body(_: Void = ()) -> String {
+        return NSLocalizedString("Body", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Delete
+      /// 
+      /// Locales: en, ar
+      static func delete(_: Void = ()) -> String {
+        return NSLocalizedString("Delete", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Edit
+      /// 
+      /// Locales: en, ar
+      static func edit(_: Void = ()) -> String {
+        return NSLocalizedString("Edit", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Post added succssfully
+      /// 
+      /// Locales: en, ar
+      static func postAddedSuccssfully(_: Void = ()) -> String {
+        return NSLocalizedString("Post added succssfully", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Post edited succssfully
+      /// 
+      /// Locales: en, ar
+      static func postEditedSuccssfully(_: Void = ()) -> String {
+        return NSLocalizedString("Post edited succssfully", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Posts
+      /// 
+      /// Locales: en, ar
+      static func posts(_: Void = ()) -> String {
+        return NSLocalizedString("Posts", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Success
+      /// 
+      /// Locales: en, ar
+      static func success(_: Void = ()) -> String {
+        return NSLocalizedString("Success", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Title
+      /// 
+      /// Locales: en, ar
+      static func title(_: Void = ()) -> String {
+        return NSLocalizedString("Title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.posts` struct is generated, and contains static references to 2 localization keys.
+    struct posts {
+      /// ar translation: Post Title
+      /// 
+      /// Locales: ar
+      static let kxqAh67LText = Rswift.StringResource(key: "Kxq-ah-67L.text", tableName: "Posts", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      /// ar translation: Posts
+      /// 
+      /// Locales: ar
+      static let g2BNNT3oTitle = Rswift.StringResource(key: "g2B-nN-t3o.title", tableName: "Posts", bundle: R.hostingBundle, locales: ["ar"], comment: nil)
+      
+      /// ar translation: Post Title
+      /// 
+      /// Locales: ar
+      static func kxqAh67LText(_: Void = ()) -> String {
+        return NSLocalizedString("Kxq-ah-67L.text", tableName: "Posts", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// ar translation: Posts
+      /// 
+      /// Locales: ar
+      static func g2BNNT3oTitle(_: Void = ()) -> String {
+        return NSLocalizedString("g2B-nN-t3o.title", tableName: "Posts", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    fileprivate init() {}
+  }
+  
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

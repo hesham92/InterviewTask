@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  InterViewTask
+
+  Created by Hesham Mohamed on 9/29/19.
+  Copyright © 2019 Hesham Mohamed. All rights reserved.
+*/
+
+
+/* PostsViewController */
+"Posts" = "Posts";
+"Edit" = "Edit";
+"Delete" = "Delete";
+
+/* AddPostViewController */
+"Body" = "Body";
+"Title" = "Title";
+"Success" = "Success";
+"Post added succssfully" = "Post added succssfully";
+"Post edited succssfully" = "Post edited succssfully";
+
+
+

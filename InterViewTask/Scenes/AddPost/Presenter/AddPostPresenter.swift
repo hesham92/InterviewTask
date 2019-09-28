@@ -36,7 +36,7 @@ class AddPostPresenter: AddPostPresenterProtocol {
             switch(result) {
             case .success(_):
                 self.view?.notifyDelegateWithAdded(post: addedPost)
-                self.view?.showSuccessMessage(message: "Post added succssfully")
+                self.view?.showSuccessMessage(title: R.string.localizable.success(), message: R.string.localizable.postAddedSuccssfully())
                 self.view?.dismissView()
             case .failure(let error):
                 self.view?.showError(error)
@@ -52,7 +52,7 @@ class AddPostPresenter: AddPostPresenterProtocol {
             switch(result) {
             case .success(_):
                 self.view?.notifyDelegateWithEdited(post: editedPost)
-                self.view?.showSuccessMessage(message: "Post edited succssfully")
+                self.view?.showSuccessMessage(title: R.string.localizable.success(), message: R.string.localizable.postEditedSuccssfully())
                 self.view?.dismissView()
             case .failure(let error):
                 self.view?.showError(error)

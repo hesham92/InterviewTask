@@ -16,7 +16,12 @@ class PostsViewController: UIViewController, LoadingViewShowing, ErrorViewShowin
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
         presenter.viewDidLoad()
+    }
+    
+    func setupView() {
+        self.title = R.string.localizable.posts()
     }
 
     class func navigationController() -> UINavigationController {
@@ -51,11 +56,11 @@ extension PostsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") {[weak self] (action, indexPath) in
+        let delete = UITableViewRowAction(style: .destructive, title: R.string.localizable.delete()) {[weak self] (action, indexPath) in
             self?.presenter.deletePost(at: indexPath)
         }
         
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") {[weak self] (action, indexPath) in
+        let edit = UITableViewRowAction(style: .normal, title: R.string.localizable.edit()) {[weak self] (action, indexPath) in
             self?.presenter.editPost(at: indexPath)
         }
         

@@ -5,7 +5,6 @@ target 'InterViewTask' do
   pod 'RealmSwift'
   pod 'ReachabilitySwift'
   pod 'UITextView+Placeholder'
-  pod 'IQKeyboardManagerSwift', '6.3.0'
   
   target 'InterViewTaskTests' do
     inherit! :search_paths
