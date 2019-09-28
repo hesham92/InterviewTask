@@ -10,13 +10,9 @@ import Foundation
 
 protocol ReadOnlyCache {
     var posts: [Post] { get }
-    func getAuthor(userId: Int) -> Author?
-    func getComments(postId: Int) -> [Comment]?
 }
 
 
 protocol Cache: ReadOnlyCache {
     var posts: [Post] { get set }
-    func addAuthor(author: Author)
-    func addComments(comments: [Comment])
 }

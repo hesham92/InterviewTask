@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hesham Mohamed. All rights reserved.
 //
 
-/*
+
 import RealmSwift
 
 class CachePost: Object {
@@ -20,7 +20,7 @@ class CachePost: Object {
     }
 
     var post: Post {
-        return Post(title: title, id: id, body: body, userId: userId)
+        return Post(title: title, body: body, id: id)
     }
 }
 
@@ -30,9 +30,6 @@ extension Post {
         post.id = id
         post.title = title
         post.body = body
-        post.userId = userId
         return post
     }
 }
-
- */

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hesham Mohamed. All rights reserved.
 //
 
-/*
+
 import Foundation
 import RealmSwift
 
@@ -30,26 +30,4 @@ class RealmCache: Cache {
             }
         }
     }
-
-    func getComments(postId: Int) -> [Comment]? {
-        return realm.objects(CacheComment.self).map({ $0.comment })
-    }
-
-    func addComments(comments: [Comment]) {
-        try? realm.write {
-            realm.add(comments.map({ $0.cacheComment }), update: true)
-        }
-    }
-
-    func getAuthor(userId: Int) -> Author? {
-        return realm.object(ofType: CacheAuthor.self, forPrimaryKey: userId)?.author
-    }
-
-    func addAuthor(author: Author) {
-        try? realm.write {
-            realm.add(author.cacheAuthor, update: true)
-        }
-    }
 }
-
- */

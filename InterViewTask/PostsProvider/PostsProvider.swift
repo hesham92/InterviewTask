@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PostsProviderProtocol {
-  //  var cache: ReadOnlyCache { get }
+    var cache: ReadOnlyCache { get }
     func getPosts(completion: @escaping (Result<[Post]>) -> ())
     func addPost(_ post: Post, completion: @escaping (Result<Post>) -> ())
     func deletePost(_ post: Post, completion: @escaping (Result<DeletePostResponse>) -> ())
@@ -22,20 +22,19 @@ enum PostsProviderError: Error {
 
 class PostsProvider: PostsProviderProtocol {
     private let completionQueue: DispatchQueue
-   // private var _cache: Cache
+    private var _cache: Cache
     private let api: HttpService<PostsAPI>
 
-    init(completionQueue: DispatchQueue = .main/*, cache: Cache = RealmCache()*/, api: HttpService<PostsAPI> = HttpService<PostsAPI>()) {
+    init(completionQueue: DispatchQueue = .main, cache: Cache = RealmCache(), api: HttpService<PostsAPI> = HttpService<PostsAPI>()) {
         self.completionQueue = completionQueue
-       // self._cache = cache
+        self._cache = cache
         self.api = api
     }
 
-   /* var cache: ReadOnlyCache {
+    var cache: ReadOnlyCache {
         return _cache
     }
- */
-
+ 
     func getPosts(completion: @escaping (Result<[Post]>) -> ()) {
         api.request(.getPosts, modelType: [Post].self) { result in
             self.completionQueue.async {
@@ -44,7 +43,7 @@ class PostsProvider: PostsProviderProtocol {
 
             // cache Posts
             if case let Result.success(posts) = result {
-              //  self._cache.posts = posts
+                 self._cache.posts = posts
             }
         }
     }
@@ -72,6 +71,4 @@ class PostsProvider: PostsProviderProtocol {
             }
         }
     }
-    
-    
 }

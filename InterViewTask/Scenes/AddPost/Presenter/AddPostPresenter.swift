@@ -57,7 +57,6 @@ class AddPostPresenter: AddPostPresenterProtocol {
             case .failure(let error):
                 self.view?.showError(error)
             }
-            
         }
     }
     

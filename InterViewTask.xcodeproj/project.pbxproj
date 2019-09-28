@@ -18,7 +18,6 @@
 		229615D1233F68EF000CCFE4 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615CD233F68EF000CCFE4 /* InternetConnection.swift */; };
 		229615D5233F6BBF000CCFE4 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615D4233F6BBF000CCFE4 /* Navigator.swift */; };
 		229615E3233F6BE3000CCFE4 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615D7233F6BE3000CCFE4 /* Cache.swift */; };
-		229615E4233F6BE3000CCFE4 /* CacheComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615DA233F6BE3000CCFE4 /* CacheComment.swift */; };
 		229615E5233F6BE3000CCFE4 /* CachePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615DB233F6BE3000CCFE4 /* CachePost.swift */; };
 		229615E6233F6BE3000CCFE4 /* CacheAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615DC233F6BE3000CCFE4 /* CacheAuthor.swift */; };
 		229615E7233F6BE3000CCFE4 /* RealmCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615DD233F6BE3000CCFE4 /* RealmCache.swift */; };
@@ -94,7 +93,6 @@
 		229615CD233F68EF000CCFE4 /* InternetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		229615D4233F6BBF000CCFE4 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		229615D7233F6BE3000CCFE4 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
-		229615DA233F6BE3000CCFE4 /* CacheComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheComment.swift; sourceTree = "<group>"; };
 		229615DB233F6BE3000CCFE4 /* CachePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachePost.swift; sourceTree = "<group>"; };
 		229615DC233F6BE3000CCFE4 /* CacheAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheAuthor.swift; sourceTree = "<group>"; };
 		229615DD233F6BE3000CCFE4 /* RealmCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmCache.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 		229615D9233F6BE3000CCFE4 /* CacheModels */ = {
 			isa = PBXGroup;
 			children = (
-				229615DA233F6BE3000CCFE4 /* CacheComment.swift */,
 				229615DB233F6BE3000CCFE4 /* CachePost.swift */,
 				229615DC233F6BE3000CCFE4 /* CacheAuthor.swift */,
 			);
@@ -739,7 +736,6 @@
 				22961607233F6C0F000CCFE4 /* PostsViewController.swift in Sources */,
 				2296162E233FB392000CCFE4 /* AddPostPresenter.swift in Sources */,
 				22961603233F6C0F000CCFE4 /* PostsPresenter.swift in Sources */,
-				229615E4233F6BE3000CCFE4 /* CacheComment.swift in Sources */,
 				2296160E233F6C0F000CCFE4 /* Author.swift in Sources */,
 				229615E9233F6BE3000CCFE4 /* NetworkCore.swift in Sources */,
 				22961605233F6C0F000CCFE4 /* PostsViewProtocol.swift in Sources */,

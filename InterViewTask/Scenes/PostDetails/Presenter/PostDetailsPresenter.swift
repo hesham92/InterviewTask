@@ -18,7 +18,6 @@ class PostDetailsPresenter: PostDetailsPresenterProtocol {
     }
 
     func viewDidLoad() {
-        // show post
-     //   self.getPostDetails()
+        self.view?.showPostDetails(title: post.title, body: post.body)
     }
 }

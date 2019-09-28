@@ -49,7 +49,7 @@ class PostsPresenter: PostsPresenterProtocol {
 
                 if let error = NetworkError(error: error), error == .noInternet {
                     self.networkError = error
-                //    self.posts = self.postsProvider.cache.posts
+                    self.posts = self.postsProvider.cache.posts
                     if self.posts.count > 0 {
                         self.view?.showPosts()
                     }

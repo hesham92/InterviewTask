@@ -37,11 +37,6 @@ class AddPostViewController: UIViewController, LoadingViewShowing & ErrorViewSho
         self.bodyTextView.layer.borderWidth = 1.0
         self.bodyTextView.layer.borderColor = UIColor.init(red: 220.0 / 255.0, green: 220.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0).cgColor
     }
-    
-    @objc func checkAction(sender : UITapGestureRecognizer) {
-        // Do what you want
-    }
-    
 }
 
 extension AddPostViewController: UITextViewDelegate {

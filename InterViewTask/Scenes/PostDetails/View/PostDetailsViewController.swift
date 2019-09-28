@@ -9,9 +9,8 @@
 import UIKit
 
 class PostDetailsViewController: UIViewController, ErrorViewShowing, LoadingViewShowing {
-    @IBOutlet weak var commentsCountLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var authorNameLabel: UILabel!
+    @IBOutlet weak var postTitleLabel: UILabel!
+    @IBOutlet weak var postBodyLabel: UILabel!
 
     var presenter: PostDetailsPresenter!
 
@@ -27,9 +26,8 @@ class PostDetailsViewController: UIViewController, ErrorViewShowing, LoadingView
 }
 
 extension PostDetailsViewController: PostDetailsViewProtocol {
-    func showPostDetails(authorName: String, commentsCount: Int, postBody: String) {
-        self.authorNameLabel.text = "Author: " + authorName
-        self.commentsCountLabel.text = "Comments Count: " + String(commentsCount)
-        self.descriptionLabel.text = "Description: " + postBody
+    func showPostDetails(title: String, body: String) {
+        self.postTitleLabel.text = title
+        self.postBodyLabel.text = body
     }
 }

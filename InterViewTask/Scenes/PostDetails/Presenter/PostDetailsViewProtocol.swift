@@ -7,7 +7,7 @@
 //
 
 protocol PostDetailsViewProtocol: class {
-    func showPostDetails(authorName: String, commentsCount: Int, postBody: String)
+    func showPostDetails(title: String, body: String)
 }
 
 
