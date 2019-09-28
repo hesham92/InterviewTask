@@ -24,14 +24,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `AddPost`.
+    static let addPost = _R.storyboard.addPost()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `PostDetails`.
     static let postDetails = _R.storyboard.postDetails()
     /// Storyboard `Posts`.
     static let posts = _R.storyboard.posts()
+    
+    /// `UIStoryboard(name: "AddPost", bundle: ...)`
+    static func addPost(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.addPost)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -71,9 +78,28 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try addPost.validate()
       try launchScreen.validate()
       try postDetails.validate()
       try posts.validate()
+    }
+    
+    struct addPost: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let addPostViewController = StoryboardViewControllerResource<AddPostViewController>(identifier: "AddPostViewController")
+      let bundle = R.hostingBundle
+      let name = "AddPost"
+      
+      func addPostViewController(_: Void = ()) -> AddPostViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: addPostViewController)
+      }
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+        if _R.storyboard.addPost().addPostViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'addPostViewController' could not be loaded from storyboard 'AddPost' as 'AddPostViewController'.") }
+      }
+      
+      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

@@ -1,6 +1,6 @@
 //
 //  UITests.swift
-//  BabylonDemoUITests
+//  InterViewTaskUITests
 //
 //  Created by Hesham Mohamed on 12/30/18.
 //  Copyright © 2018 Hesham Mohamed. All rights reserved.

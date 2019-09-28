@@ -36,13 +36,7 @@ extension EndpointType {
 
         var request = URLRequest(url: url)
         request.httpMethod = self.method.rawValue
-
-        //TODO: Handle post types
-        switch self.method {
-        case .get: break
-        default:
-            request.httpBody = try? JSONSerialization.data(withJSONObject: self.jsonParameters, options: [])
-        }
+        request.httpBody = try? JSONSerialization.data(withJSONObject: self.jsonParameters, options: [])
 
         self.headers?.forEach { it in
             request.addValue(it.value, forHTTPHeaderField: it.key)

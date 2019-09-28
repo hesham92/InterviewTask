@@ -10,8 +10,9 @@ import Foundation
 
 enum PostsAPI {
     case getPosts
-    case getAuthor(userId: Int)
-    case getComments(postId: Int)
+    case addPost(post: Post)
+    case editPost(post: Post)
+    case deletePost(post: Post)
 }
 
 extension PostsAPI: EndpointType {
@@ -21,10 +22,12 @@ extension PostsAPI: EndpointType {
         switch self {
         case .getPosts:
             return "/posts"
-        case .getAuthor(let userId):
-            return "/users?id=\(userId)"
-        case .getComments(let postId):
-            return "/comments?postId=\(postId)"
+        case .addPost(_):
+            return "/posts"
+        case .editPost(let post):
+            return "/posts"
+        case .deletePost(let post):
+            return "/posts/\(post.id)"
         }
     }
 
@@ -32,15 +35,25 @@ extension PostsAPI: EndpointType {
         switch self {
         case .getPosts:
             return .get
-        case .getAuthor(_):
-            return .get
-        case .getComments(_):
-            return .get
+        case .addPost(_):
+            return .post
+        case .editPost(_):
+            return .post
+        case .deletePost(_):
+            return .delete
         }
     }
 
     var jsonParameters: [String: Any] {
-        return [:]
+        
+        switch self {
+        case .addPost(let post):
+            return ["title": post.title, "body": post.body, "userId": 1]
+        case .editPost(let post):
+            return ["title": post.title, "body": post.body, "userId": 1, "id": post.id]
+        default:
+            return [:]
+        }
     }
 
     var headers: [String: String]? {

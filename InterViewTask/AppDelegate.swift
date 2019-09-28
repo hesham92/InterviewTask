@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         InternetConnection.shared.setObservers()
         AppNavigator.shared.start(window: &window)
+      //  IQKeyboardManager.shared.enable = true
         
         return true
     }

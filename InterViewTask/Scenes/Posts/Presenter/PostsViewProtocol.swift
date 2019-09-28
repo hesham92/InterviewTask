@@ -10,6 +10,9 @@ import UIKit
 
 protocol PostsViewProtocol: class {
     func showPosts()
+    func removePost(at indexPath: IndexPath)
+    func addPost(at indexPath: IndexPath)
+    func reloadPost(at indexPath: IndexPath)
 }
 
 protocol PostCell: class {

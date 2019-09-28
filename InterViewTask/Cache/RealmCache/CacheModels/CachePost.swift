@@ -6,6 +6,7 @@
 //  Copyright © 2019 Hesham Mohamed. All rights reserved.
 //
 
+/*
 import RealmSwift
 
 class CachePost: Object {
@@ -33,3 +34,5 @@ extension Post {
         return post
     }
 }
+
+ */

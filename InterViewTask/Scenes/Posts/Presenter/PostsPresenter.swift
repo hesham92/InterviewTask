@@ -9,6 +9,7 @@
 import UIKit
 
 class PostsPresenter: PostsPresenterProtocol {
+    
     typealias PostsView = PostsViewProtocol & LoadingViewShowing & ErrorViewShowing
     private weak var view: PostsView?
     private weak var navigator: AppNavigator!
@@ -48,7 +49,7 @@ class PostsPresenter: PostsPresenterProtocol {
 
                 if let error = NetworkError(error: error), error == .noInternet {
                     self.networkError = error
-                    self.posts = self.postsProvider.cache.posts
+                //    self.posts = self.postsProvider.cache.posts
                     if self.posts.count > 0 {
                         self.view?.showPosts()
                     }
@@ -56,7 +57,43 @@ class PostsPresenter: PostsPresenterProtocol {
             }
         }
     }
-
+    
+    
+    func editPost(at indexPath: IndexPath) {
+        navigator.navigate(to: .editPost(post: posts[indexPath.row]))
+    }
+    
+    func didTapAddPost() {
+        navigator.navigate(to: .addPost)
+    }
+    
+    func deletePost(at indexPath: IndexPath) {
+        let deletedPost = posts[indexPath.row]
+        self.posts = self.posts.filter({$0.id != deletedPost.id})
+        self.view?.showLoading()
+        self.postsProvider.deletePost(deletedPost) {  [weak self] (result) in
+            guard let self = self else { return }
+            self.view?.hideLoading()
+            switch(result) {
+            case .success(_):
+                self.view?.removePost(at: indexPath)
+            case .failure(let error):
+                self.view?.showError(error)
+            }
+        }
+    }
+    
+    func addPost(_ post: Post) {
+        self.posts.insert(post, at: 0)
+        self.view?.addPost(at: IndexPath(row: 0, section: 0))
+    }
+    
+    func editPost(_ post: Post) {
+        guard let index = posts.firstIndex(where: { $0.id == post.id }) else { return }
+        posts[index] = post
+        self.view?.reloadPost(at: IndexPath(row: index, section: 0))
+    }
+    
     func configureCell(_ cell: PostCell, atIndexPath indexPath: IndexPath) {
         let post = posts[indexPath.row]
         cell.postTitle = post.title
@@ -64,9 +101,11 @@ class PostsPresenter: PostsPresenterProtocol {
 
     func didSelectPostAtIndexPath(_ indexPath: IndexPath) {
         let post = posts[indexPath.row]
-        navigator.navigate(to: .postDetailsViewController(post: post))
+        navigator.navigate(to: .postDetails(post: post))
     }
 
+   
+    
     private func addInternetObservers() {
         notificationCenter.addObserver(self,selector: #selector(self.handleInternetStatus),name: .InternetStatus, object: nil)
     }

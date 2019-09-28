@@ -12,7 +12,7 @@ class PostsViewController: UIViewController, LoadingViewShowing, ErrorViewShowin
    @IBOutlet private weak var postsTableView: UITableView!
 
     var presenter: PostsPresenterProtocol!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +22,15 @@ class PostsViewController: UIViewController, LoadingViewShowing, ErrorViewShowin
     class func navigationController() -> UINavigationController {
         return R.storyboard.posts.instantiateInitialViewController()!
     }
+    
+    @IBAction func addPostAction(_ sender: UIBarButtonItem) {
+        presenter.didTapAddPost()
+    }
 }
 
+extension PostsViewController: UITextViewDelegate {
+    
+}
 extension PostsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.postsCount
@@ -38,15 +45,54 @@ extension PostsViewController: UITableViewDataSource {
     }
 }
 
-
 extension PostsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectPostAtIndexPath(indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") {[weak self] (action, indexPath) in
+            self?.presenter.deletePost(at: indexPath)
+        }
+        
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") {[weak self] (action, indexPath) in
+            self?.presenter.editPost(at: indexPath)
+        }
+        
+        edit.backgroundColor = UIColor.blue
+        
+        return [delete, edit]
+    }
 }
 
 extension PostsViewController: PostsViewProtocol {
+    func reloadPost(at indexPath: IndexPath) {
+        self.postsTableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
+    func addPost(at indexPath: IndexPath) {
+        self.postsTableView.beginUpdates()
+        self.postsTableView.insertRows(at: [indexPath], with: .automatic)
+        self.postsTableView.endUpdates()
+    }
+    
+    func removePost(at indexPath: IndexPath) {
+        self.postsTableView.beginUpdates()
+        self.postsTableView.deleteRows(at: [indexPath], with: .automatic)
+        self.postsTableView.endUpdates()
+    }
+    
     func showPosts() {
         self.postsTableView.reloadData()
+    }
+}
+
+extension PostsViewController: AddPostViewControllerDelegate {
+    func addPostViewController(_ addPostViewController: AddPostViewController, didEditPost post: Post) {
+        self.presenter.editPost(post)
+    }
+    
+    func addPostViewController(_ addPostViewController: AddPostViewController, didAddPost post: Post) {
+        self.presenter.addPost(post)
     }
 }

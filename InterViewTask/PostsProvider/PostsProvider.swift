@@ -9,10 +9,11 @@
 import Foundation
 
 protocol PostsProviderProtocol {
-    var cache: ReadOnlyCache { get }
+  //  var cache: ReadOnlyCache { get }
     func getPosts(completion: @escaping (Result<[Post]>) -> ())
-    func getAuthor(userId: Int, completion: @escaping (Result<Author>) -> ())
-    func getComments(postId: Int, completion: @escaping (Result<[Comment]>) -> ())
+    func addPost(_ post: Post, completion: @escaping (Result<Post>) -> ())
+    func deletePost(_ post: Post, completion: @escaping (Result<DeletePostResponse>) -> ())
+    func editPost(_ post: Post, completion: @escaping (Result<Post>) -> ())
 }
 
 enum PostsProviderError: Error {
@@ -21,18 +22,19 @@ enum PostsProviderError: Error {
 
 class PostsProvider: PostsProviderProtocol {
     private let completionQueue: DispatchQueue
-    private var _cache: Cache
+   // private var _cache: Cache
     private let api: HttpService<PostsAPI>
 
-    init(completionQueue: DispatchQueue = .main, cache: Cache = RealmCache(), api: HttpService<PostsAPI> = HttpService<PostsAPI>()) {
+    init(completionQueue: DispatchQueue = .main/*, cache: Cache = RealmCache()*/, api: HttpService<PostsAPI> = HttpService<PostsAPI>()) {
         self.completionQueue = completionQueue
-        self._cache = cache
+       // self._cache = cache
         self.api = api
     }
 
-    var cache: ReadOnlyCache {
+   /* var cache: ReadOnlyCache {
         return _cache
     }
+ */
 
     func getPosts(completion: @escaping (Result<[Post]>) -> ()) {
         api.request(.getPosts, modelType: [Post].self) { result in
@@ -42,42 +44,34 @@ class PostsProvider: PostsProviderProtocol {
 
             // cache Posts
             if case let Result.success(posts) = result {
-                self._cache.posts = posts
-            }
-        }
-    }
-
-    func getAuthor(userId: Int, completion: @escaping (Result<Author>) -> ()) {
-        api.request(.getAuthor(userId: userId), modelType: [Author].self) { result in
-            self.completionQueue.async {
-                switch result {
-                case .success(let authors):
-                    if let author = authors.first {
-                        completion(.success(author))
-                    } else {
-                        completion(.failure(PostsProviderError.emptyUserResult))
-                    }
-                case .failure(let error):
-                    completion(.failure(error))
-                }
-            }
-
-            // cache author
-            if case let Result.success(authors) = result, let author = authors.first {
-                self._cache.addAuthor(author: author)
+              //  self._cache.posts = posts
             }
         }
     }
     
-    func getComments(postId: Int, completion: @escaping (Result<[Comment]>) -> ()) {
-        api.request(.getComments(postId: postId), modelType: [Comment].self) { (result) in
+    func addPost(_ post: Post, completion: @escaping (Result<Post>) -> ()) {
+        api.request(PostsAPI.addPost(post: post), modelType: Post.self) { result in
             self.completionQueue.async {
                 completion(result)
             }
-            // cache Comments
-            if case let Result.success(comments) = result {
-                self._cache.addComments(comments: comments)
+        }
+    }
+    
+    func deletePost(_ post: Post, completion: @escaping (Result<DeletePostResponse>) -> ()) {
+        api.request(.deletePost(post: post), modelType: DeletePostResponse.self) { result in
+            self.completionQueue.async {
+                completion(result)
             }
         }
     }
+    
+    func editPost(_ post: Post, completion: @escaping (Result<Post>) -> ()) {
+        api.request(.editPost(post: post), modelType: Post.self) { result in
+            self.completionQueue.async {
+                completion(result)
+            }
+        }
+    }
+    
+    
 }

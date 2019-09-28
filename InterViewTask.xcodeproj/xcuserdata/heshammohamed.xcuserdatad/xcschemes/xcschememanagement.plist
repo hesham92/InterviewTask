@@ -6,8 +6,28 @@
 	<dict>
 		<key>InterViewTask.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>11</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>22961591233F66B4000CCFE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>229615A8233F66B5000CCFE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>229615B3233F66B5000CCFE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -12,8 +12,6 @@
 		2296159E233F66B4000CCFE4 /* InterViewTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2296159C233F66B4000CCFE4 /* InterViewTask.xcdatamodeld */; };
 		229615A0233F66B5000CCFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2296159F233F66B5000CCFE4 /* Assets.xcassets */; };
 		229615A3233F66B5000CCFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229615A1233F66B5000CCFE4 /* LaunchScreen.storyboard */; };
-		229615AE233F66B5000CCFE4 /* InterViewTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615AD233F66B5000CCFE4 /* InterViewTaskTests.swift */; };
-		229615B9233F66B5000CCFE4 /* InterViewTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615B8233F66B5000CCFE4 /* InterViewTaskUITests.swift */; };
 		229615CE233F68EF000CCFE4 /* LoadViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615C8233F68EF000CCFE4 /* LoadViewShowing.swift */; };
 		229615CF233F68EF000CCFE4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615C9233F68EF000CCFE4 /* LoadingViewController.swift */; };
 		229615D0233F68EF000CCFE4 /* ErrorViewShowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229615CB233F68EF000CCFE4 /* ErrorViewShowing.swift */; };
@@ -42,6 +40,20 @@
 		2296160F233F6C0F000CCFE4 /* PostDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22961601233F6C0F000CCFE4 /* PostDetails.storyboard */; };
 		22961610233F6C0F000CCFE4 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961602233F6C0F000CCFE4 /* PostDetailsViewController.swift */; };
 		22961612233F6D6A000CCFE4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961611233F6D6A000CCFE4 /* R.generated.swift */; };
+		2296161C233F734A000CCFE4 /* PostDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961613233F7349000CCFE4 /* PostDetailsPresenterTests.swift */; };
+		2296161D233F734A000CCFE4 /* MockAppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961614233F7349000CCFE4 /* MockAppNavigator.swift */; };
+		2296161E233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961615233F7349000CCFE4 /* PostDetailsViewMock.swift */; };
+		2296161F233F734A000CCFE4 /* PostsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961616233F734A000CCFE4 /* PostsViewMock.swift */; };
+		22961620233F734A000CCFE4 /* PostsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961617233F734A000CCFE4 /* PostsPresenterTests.swift */; };
+		22961621233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961619233F734A000CCFE4 /* PostDetailsViewMock.swift */; };
+		22961622233F734A000CCFE4 /* PostsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296161A233F734A000CCFE4 /* PostsViewMock.swift */; };
+		22961623233F734A000CCFE4 /* MockAppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296161B233F734A000CCFE4 /* MockAppNavigator.swift */; };
+		22961625233F7489000CCFE4 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961624233F7489000CCFE4 /* UITests.swift */; };
+		22961629233F7B74000CCFE4 /* AddPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22961628233F7B74000CCFE4 /* AddPost.storyboard */; };
+		2296162B233F7CBA000CCFE4 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296162A233F7CBA000CCFE4 /* AddPostViewController.swift */; };
+		2296162E233FB392000CCFE4 /* AddPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296162D233FB392000CCFE4 /* AddPostPresenter.swift */; };
+		22961630233FB3CD000CCFE4 /* AddPostViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2296162F233FB3CD000CCFE4 /* AddPostViewProtocol.swift */; };
+		22961632233FB401000CCFE4 /* AddPostPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22961631233FB401000CCFE4 /* AddPostPresenterProtocol.swift */; };
 		5B5EEF210F71BD7F66B59427 /* Pods_InterViewTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A17A0BB5BA8163670A6394 /* Pods_InterViewTaskUITests.framework */; };
 		9C43414B79592CC552359064 /* Pods_InterViewTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B26EF08D446B8A2575073C /* Pods_InterViewTask.framework */; };
 		A5431C579B9A84C34B78A46E /* Pods_InterViewTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCF7138BB7031DF16C29CF5 /* Pods_InterViewTaskTests.framework */; };
@@ -73,10 +85,8 @@
 		229615A2233F66B5000CCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		229615A4233F66B5000CCFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229615A9233F66B5000CCFE4 /* InterViewTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterViewTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		229615AD233F66B5000CCFE4 /* InterViewTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterViewTaskTests.swift; sourceTree = "<group>"; };
 		229615AF233F66B5000CCFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229615B4233F66B5000CCFE4 /* InterViewTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterViewTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		229615B8233F66B5000CCFE4 /* InterViewTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterViewTaskUITests.swift; sourceTree = "<group>"; };
 		229615BA233F66B5000CCFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		229615C8233F68EF000CCFE4 /* LoadViewShowing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadViewShowing.swift; sourceTree = "<group>"; };
 		229615C9233F68EF000CCFE4 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +116,20 @@
 		22961601233F6C0F000CCFE4 /* PostDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostDetails.storyboard; sourceTree = "<group>"; };
 		22961602233F6C0F000CCFE4 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		22961611233F6D6A000CCFE4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		22961613233F7349000CCFE4 /* PostDetailsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		22961614233F7349000CCFE4 /* MockAppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppNavigator.swift; sourceTree = "<group>"; };
+		22961615233F7349000CCFE4 /* PostDetailsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewMock.swift; sourceTree = "<group>"; };
+		22961616233F734A000CCFE4 /* PostsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewMock.swift; sourceTree = "<group>"; };
+		22961617233F734A000CCFE4 /* PostsPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsPresenterTests.swift; sourceTree = "<group>"; };
+		22961619233F734A000CCFE4 /* PostDetailsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewMock.swift; sourceTree = "<group>"; };
+		2296161A233F734A000CCFE4 /* PostsViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewMock.swift; sourceTree = "<group>"; };
+		2296161B233F734A000CCFE4 /* MockAppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppNavigator.swift; sourceTree = "<group>"; };
+		22961624233F7489000CCFE4 /* UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		22961628233F7B74000CCFE4 /* AddPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPost.storyboard; sourceTree = "<group>"; };
+		2296162A233F7CBA000CCFE4 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		2296162D233FB392000CCFE4 /* AddPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenter.swift; sourceTree = "<group>"; };
+		2296162F233FB3CD000CCFE4 /* AddPostViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewProtocol.swift; sourceTree = "<group>"; };
+		22961631233FB401000CCFE4 /* AddPostPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostPresenterProtocol.swift; sourceTree = "<group>"; };
 		251CB153E84B0548C2D633F7 /* Pods-InterViewTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterViewTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-InterViewTaskUITests/Pods-InterViewTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		304A6A378CB8F7328CEAED2F /* Pods-InterViewTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterViewTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-InterViewTaskUITests/Pods-InterViewTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64A17A0BB5BA8163670A6394 /* Pods_InterViewTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterViewTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +214,12 @@
 		229615AC233F66B5000CCFE4 /* InterViewTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				229615AD233F66B5000CCFE4 /* InterViewTaskTests.swift */,
+				22961614233F7349000CCFE4 /* MockAppNavigator.swift */,
+				22961618233F734A000CCFE4 /* Mocks */,
+				22961613233F7349000CCFE4 /* PostDetailsPresenterTests.swift */,
+				22961615233F7349000CCFE4 /* PostDetailsViewMock.swift */,
+				22961617233F734A000CCFE4 /* PostsPresenterTests.swift */,
+				22961616233F734A000CCFE4 /* PostsViewMock.swift */,
 				229615AF233F66B5000CCFE4 /* Info.plist */,
 			);
 			path = InterViewTaskTests;
@@ -199,7 +228,7 @@
 		229615B7233F66B5000CCFE4 /* InterViewTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
-				229615B8233F66B5000CCFE4 /* InterViewTaskUITests.swift */,
+				22961624233F7489000CCFE4 /* UITests.swift */,
 				229615BA233F66B5000CCFE4 /* Info.plist */,
 			);
 			path = InterViewTaskUITests;
@@ -296,6 +325,7 @@
 		229615EB233F6C0F000CCFE4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				22961626233F7A41000CCFE4 /* AddPost */,
 				229615EC233F6C0F000CCFE4 /* Posts */,
 				229615F8233F6C0F000CCFE4 /* PostDetails */,
 			);
@@ -376,6 +406,44 @@
 				22961602233F6C0F000CCFE4 /* PostDetailsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		22961618233F734A000CCFE4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				22961619233F734A000CCFE4 /* PostDetailsViewMock.swift */,
+				2296161A233F734A000CCFE4 /* PostsViewMock.swift */,
+				2296161B233F734A000CCFE4 /* MockAppNavigator.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		22961626233F7A41000CCFE4 /* AddPost */ = {
+			isa = PBXGroup;
+			children = (
+				2296162C233FB373000CCFE4 /* Presenter */,
+				22961627233F7B66000CCFE4 /* View */,
+			);
+			path = AddPost;
+			sourceTree = "<group>";
+		};
+		22961627233F7B66000CCFE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22961628233F7B74000CCFE4 /* AddPost.storyboard */,
+				2296162A233F7CBA000CCFE4 /* AddPostViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2296162C233FB373000CCFE4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2296162D233FB392000CCFE4 /* AddPostPresenter.swift */,
+				2296162F233FB3CD000CCFE4 /* AddPostViewProtocol.swift */,
+				22961631233FB401000CCFE4 /* AddPostPresenterProtocol.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		C43A00FA472B6658A9A08F5E /* Pods */ = {
@@ -481,6 +549,7 @@
 					};
 					229615B3233F66B5000CCFE4 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = 22961591233F66B4000CCFE4;
 					};
 				};
@@ -512,6 +581,7 @@
 			files = (
 				22961608233F6C0F000CCFE4 /* Posts.storyboard in Resources */,
 				2296160F233F6C0F000CCFE4 /* PostDetails.storyboard in Resources */,
+				22961629233F7B74000CCFE4 /* AddPost.storyboard in Resources */,
 				229615A3233F66B5000CCFE4 /* LaunchScreen.storyboard in Resources */,
 				229615A0233F66B5000CCFE4 /* Assets.xcassets in Resources */,
 			);
@@ -608,6 +678,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-InterViewTask/Pods-InterViewTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -615,11 +686,13 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -627,6 +700,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -663,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22961607233F6C0F000CCFE4 /* PostsViewController.swift in Sources */,
+				2296162E233FB392000CCFE4 /* AddPostPresenter.swift in Sources */,
 				22961603233F6C0F000CCFE4 /* PostsPresenter.swift in Sources */,
 				229615E4233F6BE3000CCFE4 /* CacheComment.swift in Sources */,
 				2296160E233F6C0F000CCFE4 /* Author.swift in Sources */,
@@ -678,10 +753,13 @@
 				2296160A233F6C0F000CCFE4 /* PostDetailsViewProtocol.swift in Sources */,
 				229615E3233F6BE3000CCFE4 /* Cache.swift in Sources */,
 				229615E5233F6BE3000CCFE4 /* CachePost.swift in Sources */,
+				22961630233FB3CD000CCFE4 /* AddPostViewProtocol.swift in Sources */,
+				2296162B233F7CBA000CCFE4 /* AddPostViewController.swift in Sources */,
 				22961609233F6C0F000CCFE4 /* PostTableViewCell.swift in Sources */,
 				229615D0233F68EF000CCFE4 /* ErrorViewShowing.swift in Sources */,
 				22961604233F6C0F000CCFE4 /* PostsPresenterProtocol.swift in Sources */,
 				22961596233F66B4000CCFE4 /* AppDelegate.swift in Sources */,
+				22961632233FB401000CCFE4 /* AddPostPresenterProtocol.swift in Sources */,
 				229615CF233F68EF000CCFE4 /* LoadingViewController.swift in Sources */,
 				229615CE233F68EF000CCFE4 /* LoadViewShowing.swift in Sources */,
 				229615D5233F6BBF000CCFE4 /* Navigator.swift in Sources */,
@@ -698,7 +776,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229615AE233F66B5000CCFE4 /* InterViewTaskTests.swift in Sources */,
+				2296161D233F734A000CCFE4 /* MockAppNavigator.swift in Sources */,
+				2296161E233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */,
+				22961623233F734A000CCFE4 /* MockAppNavigator.swift in Sources */,
+				22961621233F734A000CCFE4 /* PostDetailsViewMock.swift in Sources */,
+				22961622233F734A000CCFE4 /* PostsViewMock.swift in Sources */,
+				2296161F233F734A000CCFE4 /* PostsViewMock.swift in Sources */,
+				22961620233F734A000CCFE4 /* PostsPresenterTests.swift in Sources */,
+				2296161C233F734A000CCFE4 /* PostDetailsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				229615B9233F66B5000CCFE4 /* InterViewTaskUITests.swift in Sources */,
+				22961625233F7489000CCFE4 /* UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,6 +1029,7 @@
 			baseConfigurationReference = 304A6A378CB8F7328CEAED2F /* Pods-InterViewTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InterViewTaskUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -953,6 +1039,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Com.Hesham.InterViewTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = InterViewTask;
@@ -964,6 +1051,7 @@
 			baseConfigurationReference = 251CB153E84B0548C2D633F7 /* Pods-InterViewTaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InterViewTaskUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

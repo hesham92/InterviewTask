@@ -6,6 +6,7 @@
 //  Copyright © 2019 Hesham Mohamed. All rights reserved.
 //
 
+/*
 import Foundation
 import RealmSwift
 
@@ -50,3 +51,5 @@ class RealmCache: Cache {
         }
     }
 }
+
+ */
